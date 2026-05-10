@@ -1,0 +1,140 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --bg-color: #080808;
+    --card-bg: #121212;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --text: #ffffff;
+    --text-dim: #a3a3a3;
+    --border: #262626;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.bento-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 15px;
+    width: 90%;
+    max-width: 850px;
+}
+
+.bento-item {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.form-box {
+    grid-row: span 2;
+}
+
+h2, h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: #1a1a1a;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #202020;
+}
+
+.submit-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.info-box p {
+    color: var(--text-dim);
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add/Replace these specific parts in your style.css */
+
+/* Input Focus Glow */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2); /* Soft Blue Glow */
+}
+
+/* Button Hover Animation */
+.submit-btn:active {
+    transform: scale(0.98); /* Click effect */
+}
+
+/* Connect Links Styling Fix */
+.social-links a {
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
